@@ -16,7 +16,9 @@ export default function Home() {
         <div className='bg-primary'>
           <Header/>
           <div className='flex p-[30px]'>
-            <Filter/>
+            {/* <div className='flex md:hidden'> */}
+              <Filter/>              
+            {/* </div> */}
             <Content/>     
           </div>
         </div>

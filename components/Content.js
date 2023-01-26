@@ -14,6 +14,19 @@ function Content() {
         }
     }
 
+    const [results, setResults] = useState([
+        {id: 1, name: 'Lucas Kaspary', major: 'Computer Science', school: 'University of South Florida'},
+        {id: 2, name: 'Eloy Ballestros', major: 'Computer Science', school: 'University of South Florida'},
+        {id: 3, name: 'Matheus David', major: 'Computer Engineering', school: 'University of South Florida'},
+        {id: 4, name: 'Matheus Santos', major: 'Computer Science', school: 'Georgia Institute of Technology'},
+        {id: 5, name: 'Lionel Messi', major: 'Mechanical Engineering', school: 'Harvard University'},
+        {id: 6, name: 'Cristiano Ronaldo', major: 'Business Administration', school: 'Columbia University'},
+        {id: 7, name: 'Neymar Jr', major: 'Business Administration', school: 'Massachussets Institute of Technology'},
+        {id: 8, name: 'Erling Haaland', major: 'Electrical Engineering', school: 'Tufts University'},
+        {id: 9, name: 'Kevin De Bruyne', major: 'Economics', school: 'New York University'},
+        {id: 10, name: 'Robert Lewandowski', major: 'Finance', school: 'University of Toronto'}
+    ])
+
     return (
         <div className="bg-white p-[40px] rounded-lg w-full min-h-screen">
             <div className='flex w-full mb-6 relative'>
@@ -26,12 +39,12 @@ function Content() {
                             Favorites
                         </p>                      
                     </div>
-                    <p className='text-sm text-gray-500 pb-2'>Showing 10 of 100 results</p>                     
+                    <p className='text-sm text-gray-500 pb-2'>Showing 10 of {results.length} results</p>                     
                 </div>
                 <div className='flex border w-full absolute bottom-0 border-b-[3px]'/>
             </div>
             <Search/>
-            <Results activeTab={tab}/>
+            <Results activeTab={tab} results={results}/>
         </div>
     )
 }
