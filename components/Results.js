@@ -5,7 +5,7 @@ function Results({ activeTab, results }) {
     const [user, setUser] = useState({
         favorites: [1, 5]
     })
-
+ 
     const toggleFavorite = (person) => {
         if (user.favorites.includes(person.id) == false) {
             user.favorites.push(person.id)
