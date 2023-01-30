@@ -2,8 +2,14 @@ import Head from 'next/head'
 import Filter from '@/components/Filter'
 import Content from '@/components/Content'
 import Header from '@/components/Header'
+import { useState } from 'react'
 
 export default function Home() {
+
+  const [selectedStates, setSelectedStates] = useState([])
+  const [selectedSchools, setSelectedSchoosl] = useState([])
+  const [selectedMajors, setSelectedmajors  ] = useState(5)
+
   return (
     <>
       <Head>
@@ -16,7 +22,9 @@ export default function Home() {
         <div className='bg-primary'>
           <Header/>
           <div className='flex p-[30px]'>
-            <Filter/>              
+            <Filter
+              selectedStates={selectedStates}
+            />          
             <Content/>
           </div>
         </div>

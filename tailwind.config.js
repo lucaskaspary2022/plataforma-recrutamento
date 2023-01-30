@@ -6,13 +6,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'card': '0px 4px 5px rgba(0, 0, 0, 0.3)',
+      },
+      backgroundImage: {
+        connect: 'linear-gradient(to-rigth, #0288D1, #7CB342, #D1C530, #D1C530, #7CB342)'
+      },
       colors: {
         primary: "rgb(18, 24, 56)",
-        secondary: "#3c87ca",
-        third: "#88b053"
+        secondary: "#0288D1",
+        third: "#88b053",
+        icon: '#006093',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        lato: ["Lato", "sans-serif"]
       }
     },
     screens: {

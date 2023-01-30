@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Dropdown from "./Dropdown";
 
-function MultiSelect({ itemsList }) {
+function MultiSelect({ itemsList, selected }) {
 
     const [dropdown, setDropdown] = useState(false)
     const [items, setItems] = useState(itemsList);
@@ -11,9 +11,9 @@ function MultiSelect({ itemsList }) {
         setDropdown(!dropdown)
     }
 
-    const closeDropdown = () => {
-        setDropdown(false)
-    }
+    // const closeDropdown = () => {
+    //     setDropdown(false)
+    // }
 
     const addTag = (item) => {
         for (var i = 0; i < selectedItems.length; i++) {
@@ -43,6 +43,7 @@ function MultiSelect({ itemsList }) {
                 selectedItems.length > 0 ?
                 <div className="">
                     <p className="text-lg">Selected</p>
+                    <p>test {selected}</p>
                     <div className="py-2">
                         {selectedItems.map((tag, index) => {
                             return (

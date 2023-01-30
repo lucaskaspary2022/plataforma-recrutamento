@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
 import MultiSelect from './MultiSelect'
 
-function Filter() {
+function Filter({ selectedStates }) {
 
     // const [dropdownState, setDropdownState] = useState(false)
 
@@ -24,7 +24,8 @@ function Filter() {
         'Computer Science',
         'Business',
         'Computer Engineering',
-        'Political Science'
+        'Finance',
+        'Economics'
     ])
 
     // const closeDropdown = () => {
@@ -49,7 +50,7 @@ function Filter() {
                         </div>
                         <p className='text-lg'>State</p>                    
                     </div>
-                    <MultiSelect itemsList={states}/>
+                    <MultiSelect itemsList={states} selected={selectedStates}/>
                 </div>
                 <div className='flex flex-col my-6'>
                     <div className='flex mb-2'>
